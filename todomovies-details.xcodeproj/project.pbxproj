@@ -3,24 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE61EB6A2623691C00B05135 /* MovieDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE61EB682623691C00B05135 /* MovieDetailTableViewCell.swift */; };
+		FE61EB6B2623691D00B05135 /* MovieDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE61EB692623691C00B05135 /* MovieDetailTableViewCell.xib */; };
+		FE773F71262664AB008B26B7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = FE773F70262664AB008B26B7 /* Nuke */; };
 		FE84EA8D262133F800D455DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84EA8C262133F800D455DE /* AppDelegate.swift */; };
 		FE84EA8F262133F800D455DE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84EA8E262133F800D455DE /* SceneDelegate.swift */; };
-		FE84EA91262133F800D455DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84EA90262133F800D455DE /* ViewController.swift */; };
-		FE84EA94262133F800D455DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE84EA92262133F800D455DE /* Main.storyboard */; };
+		FE84EA91262133F800D455DE /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84EA90262133F800D455DE /* DetailsViewController.swift */; };
+		FE84EA94262133F800D455DE /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE84EA92262133F800D455DE /* Details.storyboard */; };
 		FE84EA962621340400D455DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE84EA952621340400D455DE /* Assets.xcassets */; };
 		FE84EA992621340400D455DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE84EA972621340400D455DE /* LaunchScreen.storyboard */; };
+		FE900063262350EA00C4A1C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = FE900062262350EA00C4A1C9 /* Moya */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE61EB682623691C00B05135 /* MovieDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewCell.swift; sourceTree = "<group>"; };
+		FE61EB692623691C00B05135 /* MovieDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailTableViewCell.xib; sourceTree = "<group>"; };
 		FE84EA89262133F800D455DE /* todomovies-details.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "todomovies-details.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE84EA8C262133F800D455DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE84EA8E262133F800D455DE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE84EA90262133F800D455DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE84EA93262133F800D455DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE84EA90262133F800D455DE /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		FE84EA93262133F800D455DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Details.storyboard; sourceTree = "<group>"; };
 		FE84EA952621340400D455DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE84EA982621340400D455DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE84EA9A2621340400D455DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE900063262350EA00C4A1C9 /* Moya in Frameworks */,
+				FE773F71262664AB008B26B7 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,14 +65,56 @@
 			isa = PBXGroup;
 			children = (
 				FE84EA8C262133F800D455DE /* AppDelegate.swift */,
-				FE84EA8E262133F800D455DE /* SceneDelegate.swift */,
-				FE84EA90262133F800D455DE /* ViewController.swift */,
-				FE84EA92262133F800D455DE /* Main.storyboard */,
 				FE84EA952621340400D455DE /* Assets.xcassets */,
-				FE84EA972621340400D455DE /* LaunchScreen.storyboard */,
 				FE84EA9A2621340400D455DE /* Info.plist */,
+				FE84EA972621340400D455DE /* LaunchScreen.storyboard */,
+				FE84EA8E262133F800D455DE /* SceneDelegate.swift */,
+				FE9000672623516A00C4A1C9 /* Utils */,
+				FE9000662623514E00C4A1C9 /* View */,
+				FE9000652623513E00C4A1C9 /* ViewModel */,
 			);
 			path = "todomovies-details";
+			sourceTree = "<group>";
+		};
+		FE9000652623513E00C4A1C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FE9000662623514E00C4A1C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE90006A2623591B00C4A1C9 /* Details */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FE9000672623516A00C4A1C9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE90006A2623591B00C4A1C9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				FE90006B2623592C00C4A1C9 /* Cell */,
+				FE84EA90262133F800D455DE /* DetailsViewController.swift */,
+				FE84EA92262133F800D455DE /* Details.storyboard */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		FE90006B2623592C00C4A1C9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FE61EB682623691C00B05135 /* MovieDetailTableViewCell.swift */,
+				FE61EB692623691C00B05135 /* MovieDetailTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +133,10 @@
 			dependencies = (
 			);
 			name = "todomovies-details";
+			packageProductDependencies = (
+				FE900062262350EA00C4A1C9 /* Moya */,
+				FE773F70262664AB008B26B7 /* Nuke */,
+			);
 			productName = "todomovies-details";
 			productReference = FE84EA89262133F800D455DE /* todomovies-details.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +164,10 @@
 				Base,
 			);
 			mainGroup = FE84EA80262133F600D455DE;
+			packageReferences = (
+				FE900061262350EA00C4A1C9 /* XCRemoteSwiftPackageReference "Moya" */,
+				FE773F6F262664AB008B26B7 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = FE84EA8A262133F800D455DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,7 +184,8 @@
 			files = (
 				FE84EA992621340400D455DE /* LaunchScreen.storyboard in Resources */,
 				FE84EA962621340400D455DE /* Assets.xcassets in Resources */,
-				FE84EA94262133F800D455DE /* Main.storyboard in Resources */,
+				FE84EA94262133F800D455DE /* Details.storyboard in Resources */,
+				FE61EB6B2623691D00B05135 /* MovieDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,21 +196,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE84EA91262133F800D455DE /* ViewController.swift in Sources */,
+				FE84EA91262133F800D455DE /* DetailsViewController.swift in Sources */,
 				FE84EA8D262133F800D455DE /* AppDelegate.swift in Sources */,
 				FE84EA8F262133F800D455DE /* SceneDelegate.swift in Sources */,
+				FE61EB6A2623691C00B05135 /* MovieDetailTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE84EA92262133F800D455DE /* Main.storyboard */ = {
+		FE84EA92262133F800D455DE /* Details.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FE84EA93262133F800D455DE /* Base */,
 			);
-			name = Main.storyboard;
+			name = Details.storyboard;
 			sourceTree = "<group>";
 		};
 		FE84EA972621340400D455DE /* LaunchScreen.storyboard */ = {
@@ -343,6 +403,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE773F6F262664AB008B26B7 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.5.0;
+			};
+		};
+		FE900061262350EA00C4A1C9 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE773F70262664AB008B26B7 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE773F6F262664AB008B26B7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		FE900062262350EA00C4A1C9 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE900061262350EA00C4A1C9 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE84EA81262133F600D455DE /* Project object */;
 }

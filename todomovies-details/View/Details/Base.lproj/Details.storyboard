@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Details View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="DetailsViewController" customModule="todomovies_details" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Lql-XL-srz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="453"/>
+                            </imageView>
+                            <button contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO9-7Q-cOs">
+                                <rect key="frame" x="32" y="48" width="32" height="32"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.87282743453979494" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="QkK-Kf-xzN"/>
+                                    <constraint firstAttribute="height" constant="32" id="xyn-yN-piQ"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="32" height="32"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large" renderingMode="template"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BQC-XC-FgZ">
+                                <rect key="frame" x="0.0" y="453" width="414" height="409"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX3-Gx-3sU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="gzh-w4-JzW"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="gSk-mn-3cy"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="yX3-Gx-3sU" secondAttribute="trailing" id="BSX-Mc-Nr9"/>
+                                    <constraint firstItem="yX3-Gx-3sU" firstAttribute="top" secondItem="BQC-XC-FgZ" secondAttribute="top" id="FFx-0G-E6J"/>
+                                    <constraint firstAttribute="bottom" secondItem="yX3-Gx-3sU" secondAttribute="bottom" id="RN6-Oq-GG4"/>
+                                    <constraint firstItem="yX3-Gx-3sU" firstAttribute="leading" secondItem="BQC-XC-FgZ" secondAttribute="leading" id="T9j-Vc-vY1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lql-XL-srz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bim-zn-A88"/>
+                            <constraint firstItem="BO9-7Q-cOs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="4" id="C2b-aX-DEr"/>
+                            <constraint firstItem="BQC-XC-FgZ" firstAttribute="top" secondItem="Lql-XL-srz" secondAttribute="bottom" id="CD7-9Y-5wh"/>
+                            <constraint firstItem="Lql-XL-srz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.5" id="G28-wm-KX1"/>
+                            <constraint firstItem="BO9-7Q-cOs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="Jez-qs-tms"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BQC-XC-FgZ" secondAttribute="trailing" id="OAl-bJ-xU8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BQC-XC-FgZ" secondAttribute="bottom" id="WrN-4f-Ot7"/>
+                            <constraint firstItem="BQC-XC-FgZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cL9-jB-X5b"/>
+                            <constraint firstAttribute="trailing" secondItem="Lql-XL-srz" secondAttribute="trailing" id="ePF-7i-EwE"/>
+                            <constraint firstItem="Lql-XL-srz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hiv-dd-1e0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="BO9-7Q-cOs" id="QmR-Ne-0Ll"/>
+                        <outlet property="backgroundImage" destination="Lql-XL-srz" id="9Pe-yM-Zma"/>
+                        <outlet property="bottomContainer" destination="BQC-XC-FgZ" id="o3h-H6-hcU"/>
+                        <outlet property="moviesTableView" destination="yX3-Gx-3sU" id="SJZ-Kx-E1j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
