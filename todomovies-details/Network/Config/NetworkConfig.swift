@@ -26,7 +26,6 @@ class NetworkConfig {
     }()
     
     var baseUrl: URL
-    private let baseAPIKey = "8afe17b8f32ffdfb65413b90e0e7c515"
     
     // MARK: - Instance
     
