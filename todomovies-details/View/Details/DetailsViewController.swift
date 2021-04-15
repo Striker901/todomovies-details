@@ -24,6 +24,9 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
         return .lightContent
     }
     
+    var listDetails: MovieListDetails!
+    var movieDetails: MovieDetails!
+    
     // MARK: - GeneralMethods
     
     override func viewDidLoad() {
@@ -38,7 +41,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
     // MARK: - UITableViewDataSource
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
