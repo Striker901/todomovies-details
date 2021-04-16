@@ -19,9 +19,9 @@ class CustomTextField: UIView {
         
         var placeholder: String {
             switch self {
-            case .apiKey: return "fodase1"
-            case .language: return "fodase2"
-            case .movieId: return "fodase3s"
+            case .apiKey: return "test1"
+            case .language: return "test2"
+            case .movieId: return "test3"
             }
         }
         var imageIcon: UIImage {
@@ -40,7 +40,7 @@ class CustomTextField: UIView {
     }
     @IBOutlet private weak var textField: UITextField! {
         didSet {
-            textField.attributedPlaceholder = NSAttributedString(string: style?.placeholder ?? "INFERNO", attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)])
+            textField.attributedPlaceholder = NSAttributedString(string: style?.placeholder ?? "hmm", attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)])
         }
     }
     
