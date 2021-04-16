@@ -16,15 +16,14 @@ enum MovieTarget {
 extension MovieTarget: TargetType {
     var baseURL: URL {
         switch self {
-        default:
-            return NetworkConfig.shared().baseUrl
+        case .movie(let movieId, let language, let apiKey): return URL(string: "https://api.themoviedb.org/3/movie/\(movieId)?api_key=\(apiKey)&language=\(language)")!
+        case .similarList(let movieId, let language, let apiKey): return URL(string: "https://api.themoviedb.org/3/movie/\(movieId)/similar?api_key=\(apiKey)&language=\(language)")!
         }
     }
     
     var path: String {
         switch self {
-        case .movie(let movieId, let language, let apiKey): return "/movie/\(movieId)?api_key=\(apiKey)&language=\(language)"
-        case .similarList(let movieId, let language, let apiKey): return "/movie/\(movieId)/similar?api_key=\(apiKey)&language=\(language)"
+        default: return ""
         }
     }
     
@@ -46,11 +45,14 @@ extension MovieTarget: TargetType {
         }
     }
     
-    var headers: [String : String]? {
+    var parameterEncoding: ParameterEncoding {
         switch self {
-        default:
-            return ["Content-Type": "application/json"]
+        default: return URLEncoding.queryString
         }
+    }
+    
+    var headers: [String : String]? {
+        return ["Content-Type": "application/json"]
     }
     
     var validationType: ValidationType {

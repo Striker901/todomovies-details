@@ -17,7 +17,6 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
             moviesTableView.register(UINib(nibName: "MovieDetailTableViewCell", bundle: nil), forCellReuseIdentifier: kMovieDetailsCellIdentifier)
         }
     }
-    @IBOutlet private var heightConstraint: NSLayoutConstraint!
     @IBOutlet private weak var backgroundImage: UIImageView!
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -33,7 +32,7 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         backButton.layer.cornerRadius = 16
         
-        if let url = URL(string: "https://cdn.motivationgrid.com/wp-content/uploads/2018/03/Johnny-Depp-Wallpaper.jpeg") {
+        if let url = URL(string: movieDetails.poster_path!) {
             Nuke.loadImage(with: url, into: backgroundImage)
         }
     }
@@ -57,6 +56,5 @@ class DetailsViewController: UIViewController, UITableViewDataSource {
         
         return cell
     }
-
 }
 

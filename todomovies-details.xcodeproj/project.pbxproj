@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1493992628F28F0094005E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1493982628F28F0094005E /* CustomTextField.swift */; };
+		FE14939C2628F2A70094005E /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE14939B2628F2A70094005E /* CustomTextField.xib */; };
+		FE1493A02628FD150094005E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14939F2628FD150094005E /* HomeViewController.swift */; };
 		FE4734E52627ABC200576217 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4734E42627ABC200576217 /* NetworkConfig.swift */; };
 		FE4734EC2627B1C400576217 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4734EB2627B1C400576217 /* MovieResponse.swift */; };
 		FE4734F12627B6FA00576217 /* MovieTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4734F02627B6FA00576217 /* MovieTarget.swift */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE1493982628F28F0094005E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		FE14939B2628F2A70094005E /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		FE14939F2628FD150094005E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE4734E42627ABC200576217 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		FE4734EB2627B1C400576217 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		FE4734F02627B6FA00576217 /* MovieTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTarget.swift; sourceTree = "<group>"; };
@@ -59,6 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE1493942628E7500094005E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEA7F74F2627C670008D8554 /* UIViewController_Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE1493972628F2760094005E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FE14939B2628F2A70094005E /* CustomTextField.xib */,
+				FE1493982628F28F0094005E /* CustomTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		FE4734E22627AB7000576217 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +168,7 @@
 		FE9000662623514E00C4A1C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE1493972628F2760094005E /* CustomViews */,
 				FE90006A2623591B00C4A1C9 /* Details */,
 			);
 			path = View;
@@ -153,8 +177,8 @@
 		FE9000672623516A00C4A1C9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FE1493942628E7500094005E /* Extensions */,
 				FEA7F7522627C7A4008D8554 /* Protocols */,
-				FEA7F74F2627C670008D8554 /* UIViewController_Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -163,8 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				FE90006B2623592C00C4A1C9 /* Cell */,
-				FE84EA90262133F800D455DE /* DetailsViewController.swift */,
 				FE84EA92262133F800D455DE /* Details.storyboard */,
+				FE84EA90262133F800D455DE /* DetailsViewController.swift */,
+				FE14939F2628FD150094005E /* HomeViewController.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -251,6 +276,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE14939C2628F2A70094005E /* CustomTextField.xib in Resources */,
 				FE84EA992621340400D455DE /* LaunchScreen.storyboard in Resources */,
 				FE84EA962621340400D455DE /* Assets.xcassets in Resources */,
 				FE84EA94262133F800D455DE /* Details.storyboard in Resources */,
@@ -273,8 +299,10 @@
 				FEA7F7502627C670008D8554 /* UIViewController_Extension.swift in Sources */,
 				FE84EA8D262133F800D455DE /* AppDelegate.swift in Sources */,
 				FE4734EC2627B1C400576217 /* MovieResponse.swift in Sources */,
+				FE1493992628F28F0094005E /* CustomTextField.swift in Sources */,
 				FE84EA8F262133F800D455DE /* SceneDelegate.swift in Sources */,
 				FE61EB6A2623691C00B05135 /* MovieDetailTableViewCell.swift in Sources */,
+				FE1493A02628FD150094005E /* HomeViewController.swift in Sources */,
 				FE4734F82627BE5900576217 /* MovieDetailsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,7 @@ class MovieApi {
     
     private let provider = MoyaProvider<MovieTarget>.init()
     
-    func movieDetails(forMovieId movieId: Int, forLanguage language: String? = "en-US", forApiKey apiKey: String, withCompletion completion: @escaping DetailsCompletion) {
+    func movieDetails(forMovieId movieId: Int, forLanguage language: String?, forApiKey apiKey: String, withCompletion completion: @escaping DetailsCompletion) {
         provider.request(.movie(movieId: movieId, language: language!, apiKey: apiKey)) { (result) in
             switch result {
             case .success(let response):
