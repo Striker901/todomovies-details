@@ -16,14 +16,14 @@ enum MovieTarget {
 extension MovieTarget: TargetType {
     var baseURL: URL {
         switch self {
-        case .movie(let movieId, let language, let apiKey): return URL(string: "https://api.themoviedb.org/3/movie/\(movieId)?api_key=\(apiKey)&language=\(language)")!
-        case .similarList(let movieId, let language, let apiKey): return URL(string: "https://api.themoviedb.org/3/movie/\(movieId)/similar?api_key=\(apiKey)&language=\(language)")!
+        default: return URL(string: "https://api.themoviedb.org/3")!
         }
     }
     
     var path: String {
         switch self {
-        default: return ""
+        case .similarList(let movieId, _, _): return "/movie\(movieId)/similar"
+        case .movie(let movieId, _, _): return "/movie/\(movieId)"
         }
     }
     
@@ -40,14 +40,19 @@ extension MovieTarget: TargetType {
     }
     
     var task: Task {
+        var parameters: [String: String] = [:]
         switch self {
-        default: return .requestPlain
+        case .movie(_, let language, let apiKey), .similarList(_, let language, let apiKey):
+            parameters["api_key"] = apiKey
+            parameters["language"] = language
+        
+            return .requestParameters(parameters: parameters, encoding: parameterEncoding)
         }
     }
     
     var parameterEncoding: ParameterEncoding {
         switch self {
-        default: return URLEncoding.queryString
+        default: return URLEncoding.default
         }
     }
     

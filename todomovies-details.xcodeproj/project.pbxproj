@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE1493992628F28F0094005E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1493982628F28F0094005E /* CustomTextField.swift */; };
-		FE14939C2628F2A70094005E /* CustomTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE14939B2628F2A70094005E /* CustomTextField.xib */; };
+		FE1493992628F28F0094005E /* CustomIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1493982628F28F0094005E /* CustomIconView.swift */; };
+		FE14939C2628F2A70094005E /* CustomIconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE14939B2628F2A70094005E /* CustomIconView.xib */; };
 		FE1493A02628FD150094005E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE14939F2628FD150094005E /* HomeViewController.swift */; };
 		FE4734E52627ABC200576217 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4734E42627ABC200576217 /* NetworkConfig.swift */; };
 		FE4734EC2627B1C400576217 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4734EB2627B1C400576217 /* MovieResponse.swift */; };
@@ -27,11 +27,13 @@
 		FE900063262350EA00C4A1C9 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = FE900062262350EA00C4A1C9 /* Moya */; };
 		FEA7F7502627C670008D8554 /* UIViewController_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7F74F2627C670008D8554 /* UIViewController_Extension.swift */; };
 		FEA7F7542627C7B8008D8554 /* DataLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA7F7532627C7B8008D8554 /* DataLoad.swift */; };
+		FECA817D262E38D500AE38BC /* SwiftSpinner in Frameworks */ = {isa = PBXBuildFile; productRef = FECA817C262E38D500AE38BC /* SwiftSpinner */; };
+		FECA8180262E3BB600AE38BC /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECA817F262E3BB500AE38BC /* String_Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FE1493982628F28F0094005E /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
-		FE14939B2628F2A70094005E /* CustomTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextField.xib; sourceTree = "<group>"; };
+		FE1493982628F28F0094005E /* CustomIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIconView.swift; sourceTree = "<group>"; };
+		FE14939B2628F2A70094005E /* CustomIconView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomIconView.xib; sourceTree = "<group>"; };
 		FE14939F2628FD150094005E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FE4734E42627ABC200576217 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		FE4734EB2627B1C400576217 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		FE84EA9A2621340400D455DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEA7F74F2627C670008D8554 /* UIViewController_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController_Extension.swift; sourceTree = "<group>"; };
 		FEA7F7532627C7B8008D8554 /* DataLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoad.swift; sourceTree = "<group>"; };
+		FECA817F262E3BB500AE38BC /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,7 @@
 			files = (
 				FE900063262350EA00C4A1C9 /* Moya in Frameworks */,
 				FE773F71262664AB008B26B7 /* Nuke in Frameworks */,
+				FECA817D262E38D500AE38BC /* SwiftSpinner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				FEA7F74F2627C670008D8554 /* UIViewController_Extension.swift */,
+				FECA817F262E3BB500AE38BC /* String_Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -76,8 +81,8 @@
 		FE1493972628F2760094005E /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
-				FE14939B2628F2A70094005E /* CustomTextField.xib */,
-				FE1493982628F28F0094005E /* CustomTextField.swift */,
+				FE14939B2628F2A70094005E /* CustomIconView.xib */,
+				FE1493982628F28F0094005E /* CustomIconView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -197,8 +202,8 @@
 		FE90006B2623592C00C4A1C9 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FE61EB682623691C00B05135 /* MovieDetailTableViewCell.swift */,
 				FE61EB692623691C00B05135 /* MovieDetailTableViewCell.xib */,
+				FE61EB682623691C00B05135 /* MovieDetailTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 			packageProductDependencies = (
 				FE900062262350EA00C4A1C9 /* Moya */,
 				FE773F70262664AB008B26B7 /* Nuke */,
+				FECA817C262E38D500AE38BC /* SwiftSpinner */,
 			);
 			productName = "todomovies-details";
 			productReference = FE84EA89262133F800D455DE /* todomovies-details.app */;
@@ -261,6 +267,7 @@
 			packageReferences = (
 				FE900061262350EA00C4A1C9 /* XCRemoteSwiftPackageReference "Moya" */,
 				FE773F6F262664AB008B26B7 /* XCRemoteSwiftPackageReference "Nuke" */,
+				FECA817B262E38D500AE38BC /* XCRemoteSwiftPackageReference "SwiftSpinner" */,
 			);
 			productRefGroup = FE84EA8A262133F800D455DE /* Products */;
 			projectDirPath = "";
@@ -276,7 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE14939C2628F2A70094005E /* CustomTextField.xib in Resources */,
+				FE14939C2628F2A70094005E /* CustomIconView.xib in Resources */,
 				FE84EA992621340400D455DE /* LaunchScreen.storyboard in Resources */,
 				FE84EA962621340400D455DE /* Assets.xcassets in Resources */,
 				FE84EA94262133F800D455DE /* Details.storyboard in Resources */,
@@ -295,11 +302,12 @@
 				FE84EA91262133F800D455DE /* DetailsViewController.swift in Sources */,
 				FEA7F7542627C7B8008D8554 /* DataLoad.swift in Sources */,
 				FE4734E52627ABC200576217 /* NetworkConfig.swift in Sources */,
+				FECA8180262E3BB600AE38BC /* String_Extension.swift in Sources */,
 				FE4734F52627BB5300576217 /* MovieApi.swift in Sources */,
 				FEA7F7502627C670008D8554 /* UIViewController_Extension.swift in Sources */,
 				FE84EA8D262133F800D455DE /* AppDelegate.swift in Sources */,
 				FE4734EC2627B1C400576217 /* MovieResponse.swift in Sources */,
-				FE1493992628F28F0094005E /* CustomTextField.swift in Sources */,
+				FE1493992628F28F0094005E /* CustomIconView.swift in Sources */,
 				FE84EA8F262133F800D455DE /* SceneDelegate.swift in Sources */,
 				FE61EB6A2623691C00B05135 /* MovieDetailTableViewCell.swift in Sources */,
 				FE1493A02628FD150094005E /* HomeViewController.swift in Sources */,
@@ -525,6 +533,14 @@
 				minimumVersion = 14.0.1;
 			};
 		};
+		FECA817B262E38D500AE38BC /* XCRemoteSwiftPackageReference "SwiftSpinner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/icanzilb/SwiftSpinner.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -537,6 +553,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FE900061262350EA00C4A1C9 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		FECA817C262E38D500AE38BC /* SwiftSpinner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FECA817B262E38D500AE38BC /* XCRemoteSwiftPackageReference "SwiftSpinner" */;
+			productName = SwiftSpinner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

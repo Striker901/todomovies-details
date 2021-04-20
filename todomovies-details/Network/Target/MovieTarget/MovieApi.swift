@@ -14,8 +14,8 @@ class MovieApi {
     
     private let provider = MoyaProvider<MovieTarget>.init()
     
-    func movieDetails(forMovieId movieId: Int, forLanguage language: String?, forApiKey apiKey: String, withCompletion completion: @escaping DetailsCompletion) {
-        provider.request(.movie(movieId: movieId, language: language!, apiKey: apiKey)) { (result) in
+    func movieDetails(forMovieId movieId: Int, forLanguage language: String, forApiKey apiKey: String, withCompletion completion: @escaping DetailsCompletion) {
+        provider.request(.movie(movieId: movieId, language: language, apiKey: apiKey)) { (result) in
             switch result {
             case .success(let response):
                 do {
@@ -29,12 +29,12 @@ class MovieApi {
         }
     }
     
-    func movieListDetails(forMovieId movieId: Int, forLanguage language: String? = "en-US", forApiKey apiKey: String, withCompletion completion: @escaping DetailsListCompletion) {
-        provider.request(.similarList(movieId: movieId, language: language!, apiKey: apiKey)) { (result) in
+    func movieListDetails(forMovieId movieId: Int, forLanguage language: String, forApiKey apiKey: String, withCompletion completion: @escaping DetailsListCompletion) {
+        provider.request(.similarList(movieId: movieId, language: language, apiKey: apiKey)) { (result) in
             switch result {
             case .success(let response):
                 do {
-                    completion(.success(try response.map(MovieListDetails.self)))
+                    completion(.success(try response.map(DetailsListResponse.self)))
                 } catch {
                     completion(.failure(.parseJSON))
                 }

@@ -14,4 +14,12 @@ extension UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: storyboarName, bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: viewControllerName)
     }
+    
+    func modalViewController(withStoryboarName storyboarName: String, _ viewControllerName: String) -> UIViewController {
+        let viewController = self.viewController(withStoryboarName: storyboarName, viewControllerName)
+        viewController.modalPresentationStyle = .overFullScreen
+        viewController.modalTransitionStyle = .crossDissolve
+        
+        return viewController
+    }
 }
